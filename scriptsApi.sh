@@ -2,6 +2,10 @@ dnf install mysql -y
 
 dnf install pip -y
 
+useradd -m -s /bin/bash apiuser
+
+su - apiuser 
+
 pip install virtualenv
 
 virtualenv ./env
