@@ -10,6 +10,7 @@ Vous êtes au bon endroit !
 
 Vous avez besoin de **trois VMs**.
 
+```
 Nom_VM     | Ip VM       | ISO VM
 
 Api.VM     | 10.110.1.11 | Rocky Linux 9
@@ -17,6 +18,7 @@ Api.VM     | 10.110.1.11 | Rocky Linux 9
 Mariadb.VM | 10.110.1.12 | Rocky Linux 9
 
 RProxy.VM  | 10.110.1.13 | Rocky Linux 9
+```
 
 ### Sur chaque vm il vous faut git:
 ```bash
