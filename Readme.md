@@ -107,14 +107,14 @@ exit;
 ### A. Installation des package de base
 
 ```bash
-sudo bash installationFlaskVM.sh
+sudo bash flask_install.sh
 cd WebApiInfra/
 ```
 
 ### B. Lancement du script de configuration de l'api Flask
 
 ```bash
-bash setUpFlask.sh
+bash api_setup.sh
 ```
 
 ## 
