@@ -31,7 +31,7 @@ git clone https://github.com/Echalaye/WebApiInfra.git
 ### A. Installation des packages de base
 
 ```bash
-sudo bash mariadb_install.sh
+sudo bash WebApiInfra/mariadb_install.sh
 ```
 
 **installation du serveur mariadb**
