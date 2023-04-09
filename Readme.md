@@ -86,7 +86,7 @@ exit;
 ## Configuration RProxy.VM
 
 ```bash
-bash WebApiInfra/reverseproxy_install.sh
+sudo bash WebApiInfra/reverseproxy_install.sh
 ```
 
 ## Configuration Api.VM
