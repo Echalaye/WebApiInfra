@@ -8,8 +8,8 @@ import decimal
 # Connect to MariaDB Platform
 try:
     conn = mysql.connector.connect(
-        user="django",
-        password="django",
+        user="flask",
+        password="flask",
         host="10.110.1.12",
         port=3306,
         database="PokemonDB"

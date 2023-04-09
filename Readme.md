@@ -71,10 +71,11 @@ Reload privilege tables now? [Y/n] y
 
 ```bash
 sudo mysql -u root -p  
-CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
+CREATE USER 'flask'@'10.110.1.11' IDENTIFIED BY 'flask';  
 CREATE DATABASE PokemonDB;
-exit;
-sql -u root -p PokemonDB < WebApiInfra/data.sql 
+exit
+mysql -u root -p PokemonDB < WebApiInfra/data.sql 
+sudo mysql -u root -p  
 use PokemonDB;
 show TABLES;
 ```
@@ -95,7 +96,7 @@ show TABLES;
 +---------------------+
 ```
 ```bash
-GRANT ALL PRIVILEGES ON PokemonDB.* TO 'django'@'10.110.1.11';
+GRANT ALL PRIVILEGES ON PokemonDB.* TO 'flask'@'10.110.1.11';
 FLUSH PRIVILEGES;
 exit;
 ```
