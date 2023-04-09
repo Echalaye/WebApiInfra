@@ -8,15 +8,19 @@ Vous êtes au bon endroit !
 
 ## Prérequis:
 
-vous avez besoin de **deux machines**.
+vous avez besoin de **trois VMs**.
 
-Nom_Machine     | Ip machine  | ISO machine
+Nom_VM     | Ip VM       | ISO VM
 
-Api.machine     | 10.110.1.11 | Rocky Linux 9
+Api.VM     | 10.110.1.11 | Rocky Linux 9
 
-Mariadb.machine | 10.110.1.12 | Rocky Linux 9
+Mariadb.VM | 10.110.1.12 | Rocky Linux 9
 
-## Configuration Mariadb.machine
+RProxy.VM  | 10.110.1.13 | Rocky Linux 9
+
+
+
+## Configuration Mariadb.VM
 
 ### A. Instalation des packages de base
 
@@ -98,12 +102,12 @@ exit;
 
 **Vous avez fini la mise en place de votre serveur Mariadb**
 
-## Configuration Api.machine
+## Configuration Api.VM
 
 ### A. Installation des package de base
 
 ```bash
-sudo bash installationFlaskMachine.sh
+sudo bash installationFlaskVM.sh
 cd WebApiInfra/
 ```
 
@@ -112,3 +116,5 @@ cd WebApiInfra/
 ```bash
 bash setUpFlask.sh
 ```
+
+## 
