@@ -108,13 +108,15 @@ exit;
 ### A. Installation des packages de base
 
 ```bash
-sudo bash flask_install.sh
+sudo dnf install git -y  
+git clone https://github.com/Echalaye/WebApiInfra.git 
+sudo bash WebApiInfra/flask_install.sh
 ```
 
 ### B. Lancement du script de configuration de l'api Flask
 
 ```bash
-bash api_setup.sh
+bash WebApiInfra/api_setup.sh
 ```
 
 ## 
