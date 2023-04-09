@@ -104,7 +104,7 @@ sudo bash WebApiInfra/flask_install.sh ; bash WebApiInfra/api_setup.sh
 source ./env/bin/activate ; python WebApiInfra/app.py
 ```
 
-Pour accéder à votre api il faut:
-Aller sur le lien suivant 10.110.1.13 dans votre navigateur ou avec un curl
+Pour accéder à votre api il faut:  
+Aller sur le lien suivant 10.110.1.13 dans votre navigateur ou avec un curl pour utiliser l'api.  
 
 
