@@ -94,3 +94,10 @@ sudo bash WebApiInfra/reverseproxy_install.sh
 ```bash
 sudo bash WebApiInfra/flask_install.sh ; bash WebApiInfra/api_setup.sh
 ```
+
+## Utilisation
+
+**Pour lancer l'api:**
+```bash
+source ./env/bin/activate ; python WebApiInfra/app.py
+```
