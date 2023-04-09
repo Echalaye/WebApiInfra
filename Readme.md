@@ -18,15 +18,17 @@ Mariadb.VM | 10.110.1.12 | Rocky Linux 9
 
 RProxy.VM  | 10.110.1.13 | Rocky Linux 9
 
-
+Sur chaque vm il vous faut git:
+```bash
+sudo dnf install git -y  
+git clone https://github.com/Echalaye/WebApiInfra.git  
+```
 
 ## Configuration Mariadb.VM
 
 ### A. Installation des packages de base
 
 ```bash
-sudo dnf install git -y  
-git clone https://github.com/Echalaye/WebApiInfra.git  
 sudo bash mariadb_install.sh
 ```
 
@@ -81,17 +83,15 @@ exit;
 
 **Vous avez fini la mise en place de votre serveur Mariadb**
 
+## Configuration Proxy.VM
 
+```bash
+etienne_Cagoulé — Aujourd’hui à 19:28
+bash WebApiInfra/reverseproxy_install.sh
+```
 
 ## Configuration Api.VM
 
-### A. Installation des packages de base 
-
 ```bash
-sudo dnf install git -y  
-git clone https://github.com/Echalaye/WebApiInfra.git 
 sudo bash WebApiInfra/flask_install.sh ; bash WebApiInfra/api_setup.sh
 ```
-
-
-## 
