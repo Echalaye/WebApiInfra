@@ -83,10 +83,9 @@ exit;
 
 **Vous avez fini la mise en place de votre serveur Mariadb**
 
-## Configuration Proxy.VM
+## Configuration RProxy.VM
 
 ```bash
-etienne_Cagoulé — Aujourd’hui à 19:28
 bash WebApiInfra/reverseproxy_install.sh
 ```
 
