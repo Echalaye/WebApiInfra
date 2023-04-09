@@ -20,7 +20,7 @@ Mariadb.machine | 10.110.1.15 | Rocky Linux 9
 
 ### A. Instalation des packages de base
 
-```
+```bash
 sudo dnf update -y
 
 sudo dnf install git -y
@@ -30,7 +30,7 @@ git clone https://github.com/Echalaye/WebApiInfra.git
 
 ### B. mise en place mariadb-server
 
-```
+```bash
 sudo dnf install mariadb-server -y
 
 sudo systemctl enable mariadb
@@ -40,21 +40,21 @@ sudo systemctl start mariadb
 
 **faite la commande suivante pour vérifié que votre service mariadb tourne bien**
 
-```
+```bash
 sudo systemctl status mariadb
 ```
 **résultat attendus**
-```
+```bash
 Active: active (running) since Tue 2022-11-15 11:29:56 CET; 12s ago
 ```
 
 **installation du serveur mariadb**
 
-```
+```bash
 sudo mysql_secure_installation
 ```
 **je vous recommande d'avoir l'installation suivante**
-```
+```bash
 Switch to unix_socket authentication [Y/n] y
 Change the root password? [Y/n] y
 Remove anonymous users? [Y/n] y
@@ -65,7 +65,7 @@ Reload privilege tables now? [Y/n] y
 
 **configuration du serveur**
 
-```
+```bash
 sudo mysql -u root -p  
 CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
 CREATE DATABASE PokemonDB;
@@ -75,7 +75,7 @@ use PokemonDB;
 show TABLES;
 ```
 **vous devez avoir le résultat suivant**  
-```
+```bash
 +---------------------+
 | Tables_in_PokemonDB |
 +---------------------+
@@ -90,7 +90,7 @@ show TABLES;
 | type                |
 +---------------------+
 ```
-```
+```bash
 GRANT ALL PRIVILEGES ON PokemonDB.* TO 'django'@'10.110.1.11';
 FLUSH PRIVILEGES;
 exit;
@@ -102,7 +102,7 @@ exit;
 
 ### A. Installation des package de base
 
-```
+```bash
 sudo dnf update -y  
 sudo dnf install mysql -y  
 sudo dnf install pip -y  
@@ -113,6 +113,6 @@ cd WebApiInfra/
 
 ### B. Lancement du script de configuration de l'api Flask
 
-```
+```bash
 bash setUpFlask.sh
 ```
