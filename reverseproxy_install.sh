@@ -3,7 +3,7 @@ dnf install nginx -y
 firewall-cmd --add-port=80/tcp --permanent
 firewall-cmd --reload
 touch /etc/nginx/conf.d/nginx.conf
-echo "server {
+echo 'server {
     server_name flaskweb;
 
     listen 80;
@@ -18,6 +18,6 @@ echo "server {
 
         proxy_pass http://10.110.1.11:5000;
     }
-}" | tee /etc/nginx/conf.d/nginx.conf > /dev/null
+}' | tee /etc/nginx/conf.d/nginx.conf > /dev/null
 systemctl start nginx
 systemctl enable nginx
