@@ -10,7 +10,7 @@ try:
     conn = mysql.connector.connect(
         user="django",
         password="django",
-        host="10.110.1.15",
+        host="10.110.1.12",
         port=3306,
         database="PokemonDB"
 

@@ -14,7 +14,7 @@ Nom_Machine     | Ip machine  | ISO machine
 
 Api.machine     | 10.110.1.11 | Rocky Linux 9
 
-Mariadb.machine | 10.110.1.15 | Rocky Linux 9
+Mariadb.machine | 10.110.1.12 | Rocky Linux 9
 
 ## Configuration Mariadb.machine
 
