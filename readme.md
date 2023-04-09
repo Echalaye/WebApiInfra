@@ -108,5 +108,5 @@ cd WebApiInfra/
 ### B. Lancement du script de configuration de l'api Flask
 
 ```
-bash scriptsApi.sh
+bash setUpFlask.sh
 ```
