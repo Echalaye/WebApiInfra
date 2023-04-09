@@ -134,3 +134,7 @@ def pokemonType():
 
     # return the results!
     return json.dumps(json_data)
+
+
+if __name__ == "__main__":
+    app.run(host='10.110.1.11', port=5000)
