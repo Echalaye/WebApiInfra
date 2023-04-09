@@ -25,34 +25,9 @@ RProxy.VM  | 10.110.1.13 | Rocky Linux 9
 ### A. Installation des packages de base
 
 ```bash
-sudo dnf update -y
-
-sudo dnf install git -y
-
-git clone https://github.com/Echalaye/WebApiInfra.git
-
-sudo firewall-cmd --add-port=3306/tcp --permanent
-sudo firewall-cmd --reload
-```
-
-### B. Mise en place mariadb-server
-
-```bash
-sudo dnf install mariadb-server -y
-
-sudo systemctl enable mariadb
-
-sudo systemctl start mariadb
-```
-
-**Faites la commande suivante pour vérifier que votre service mariadb tourne bien**
-
-```bash
-sudo systemctl status mariadb
-```
-**résultat attendus**
-```bash
-Active: active (running) since Tue 2022-11-15 11:29:56 CET; 12s ago
+sudo dnf install git -y  
+git clone https://github.com/Echalaye/WebApiInfra.git  
+sudo bash mariadb_install.sh
 ```
 
 **installation du serveur mariadb**
