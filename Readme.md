@@ -81,6 +81,8 @@ exit;
 
 **Vous avez fini la mise en place de votre serveur Mariadb**
 
+
+
 ## Configuration Api.VM
 
 ### A. Installation des packages de base 
