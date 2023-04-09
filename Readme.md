@@ -8,7 +8,7 @@ Vous êtes au bon endroit !
 
 ## Prérequis:
 
-vous avez besoin de **trois VMs**.
+Vous avez besoin de **trois VMs**.
 
 Nom_VM     | Ip VM       | ISO VM
 
@@ -22,7 +22,7 @@ RProxy.VM  | 10.110.1.13 | Rocky Linux 9
 
 ## Configuration Mariadb.VM
 
-### A. Instalation des packages de base
+### A. Installation des packages de base
 
 ```bash
 sudo dnf update -y
@@ -32,7 +32,7 @@ sudo dnf install git -y
 git clone https://github.com/Echalaye/WebApiInfra.git
 ```
 
-### B. mise en place mariadb-server
+### B. Mise en place mariadb-server
 
 ```bash
 sudo dnf install mariadb-server -y
@@ -42,7 +42,7 @@ sudo systemctl enable mariadb
 sudo systemctl start mariadb
 ```
 
-**faite la commande suivante pour vérifié que votre service mariadb tourne bien**
+**Faites la commande suivante pour vérifier que votre service mariadb tourne bien**
 
 ```bash
 sudo systemctl status mariadb
@@ -57,7 +57,7 @@ Active: active (running) since Tue 2022-11-15 11:29:56 CET; 12s ago
 ```bash
 sudo mysql_secure_installation
 ```
-**je vous recommande d'avoir l'installation suivante**
+**Les paramètres suivants sont recommandés**
 ```bash
 Switch to unix_socket authentication [Y/n] y
 Change the root password? [Y/n] y
@@ -67,7 +67,7 @@ Remove test database and access to it? [Y/n] y
 Reload privilege tables now? [Y/n] y
 ```
 
-**configuration du serveur**
+**Configuration du serveur**
 
 ```bash
 sudo mysql -u root -p  
@@ -78,7 +78,7 @@ sql -u root -p PokemonDB < WebApiInfra/data.sql
 use PokemonDB;
 show TABLES;
 ```
-**vous devez avoir le résultat suivant**  
+**Vous devez avoir le résultat suivant**  
 ```bash
 +---------------------+
 | Tables_in_PokemonDB |
@@ -104,11 +104,10 @@ exit;
 
 ## Configuration Api.VM
 
-### A. Installation des package de base
+### A. Installation des packages de base
 
 ```bash
 sudo bash flask_install.sh
-cd WebApiInfra/
 ```
 
 ### B. Lancement du script de configuration de l'api Flask
