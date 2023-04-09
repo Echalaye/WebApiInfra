@@ -62,12 +62,8 @@ Reload privilege tables now? [Y/n] y
 **configuration du serveur**
 
 ```
-sudo mysql -u root -p
-
-CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';
-
-CREATE DATABASE IF NOT EXISTS pokemonDB CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-
-sudo mysqldump -u root pokemonDB < WebApiInfra/data.sql
-
-GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'10.102.1.11';
+sudo mysql -u root -p  
+CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
+CREATE DATABASE pokemonDB;  
+sudo mysqldump -u root pokemonDB < WebApiInfra/data.sql  
+GRANT ALL PRIVILEGES ON django.* TO 'django'@'10.110.1.11';
