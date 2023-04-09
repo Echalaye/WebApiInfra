@@ -102,7 +102,7 @@ exit;
 
 ### A. Installation des package de base
 
-```
+```bash
 sudo bash installationFlaskMachine.sh
 cd WebApiInfra/
 ```
