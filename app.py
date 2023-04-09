@@ -12,7 +12,7 @@ try:
         password="django",
         host="10.110.1.15",
         port=3306,
-        database="pokemonDB"
+        database="PokemonDB"
 
     )
 except mysql.connector.Error as e:

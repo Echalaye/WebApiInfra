@@ -68,16 +68,16 @@ Reload privilege tables now? [Y/n] y
 ```
 sudo mysql -u root -p  
 CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
-CREATE DATABASE pokemonDB;
+CREATE DATABASE PokemonDB;
 exit;
-sql -u root -p pokemonDB < WebApiInfra/data.sql 
-use pokemonDB;
+sql -u root -p PokemonDB < WebApiInfra/data.sql 
+use PokemonDB;
 show TABLES;
 ```
 **vous devez avoir le résultat suivant**  
 ```
 +---------------------+
-| Tables_in_pokemonDB |
+| Tables_in_PokemonDB |
 +---------------------+
 | ability             |
 | base_stat           |
@@ -91,7 +91,7 @@ show TABLES;
 +---------------------+
 ```
 ```
-GRANT ALL PRIVILEGES ON pokemonDB.* TO 'django'@'10.110.1.11';
+GRANT ALL PRIVILEGES ON PokemonDB.* TO 'django'@'10.110.1.11';
 FLUSH PRIVILEGES;
 exit;
 ```
