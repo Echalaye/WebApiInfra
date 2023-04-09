@@ -83,18 +83,13 @@ exit;
 
 ## Configuration Api.VM
 
-### A. Installation des packages de base
+### A. Installation des packages de base 
 
 ```bash
 sudo dnf install git -y  
 git clone https://github.com/Echalaye/WebApiInfra.git 
-sudo bash WebApiInfra/flask_install.sh
+sudo bash WebApiInfra/flask_install.sh ; bash WebApiInfra/api_setup.sh
 ```
 
-### B. Lancement du script de configuration de l'api Flask
-
-```bash
-bash WebApiInfra/api_setup.sh
-```
 
 ## 
