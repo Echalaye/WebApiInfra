@@ -64,6 +64,49 @@ Reload privilege tables now? [Y/n] y
 ```
 sudo mysql -u root -p  
 CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
-CREATE DATABASE pokemonDB;  
-sudo mysqldump -u root pokemonDB < WebApiInfra/data.sql  
-GRANT ALL PRIVILEGES ON django.* TO 'django'@'10.110.1.11';
+CREATE DATABASE pokemonDB;
+exit;
+sql -u root -p pokemonDB < WebApiInfra/data.sql 
+use pokemonDB;
+show TABLES;
+```
+**vous devez avoir le résultat suivant**  
+```
++---------------------+
+| Tables_in_pokemonDB |
++---------------------+
+| ability             |
+| base_stat           |
+| move                |
+| pokemon             |
+| pokemon_ability     |
+| pokemon_move        |
+| pokemon_type        |
+| sqlite_sequence     |
+| type                |
++---------------------+
+```
+```
+GRANT ALL PRIVILEGES ON pokemonDB.* TO 'django'@'10.110.1.11';
+FLUSH PRIVILEGES;
+exit;
+```
+
+**Vous avez fini la mise en place de votre serveur Mariadb**
+
+## Configuration Api.machine
+
+### A. Installation des package de base
+
+```
+sudo dnf install mysql -y  
+sudo dnf install git -y  
+git clone https://github.com/Echalaye/WebApiInfra.git  
+cd WebApiInfra/
+```
+
+### B. Lancement du script de configuration de l'api Flask
+
+```
+bash scriptsApi.sh
+```
