@@ -66,12 +66,51 @@ Reload privilege tables now? [Y/n] y
 **configuration du serveur**
 
 ```
-sudo mysql -u root -p
+sudo mysql -u root -p  
+CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';  
+CREATE DATABASE pokemonDB;
+exit;
+sql -u root -p pokemonDB < WebApiInfra/data.sql 
+use pokemonDB;
+show TABLES;
+```
+**vous devez avoir le résultat suivant**  
+```
++---------------------+
+| Tables_in_pokemonDB |
++---------------------+
+| ability             |
+| base_stat           |
+| move                |
+| pokemon             |
+| pokemon_ability     |
+| pokemon_move        |
+| pokemon_type        |
+| sqlite_sequence     |
+| type                |
++---------------------+
+```
+```
+GRANT ALL PRIVILEGES ON pokemonDB.* TO 'django'@'10.110.1.11';
+FLUSH PRIVILEGES;
+exit;
+```
 
-CREATE USER 'django'@'10.110.1.11' IDENTIFIED BY 'VOTRE_MOT_DE_PASSE';
+**Vous avez fini la mise en place de votre serveur Mariadb**
 
-CREATE DATABASE IF NOT EXISTS pokemonDB CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+## Configuration Api.machine
 
-sudo mysqldump -u root pokemonDB < WebApiInfra/data.sql
+### A. Installation des package de base
 
-GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'10.102.1.11';
+```
+sudo dnf install mysql -y  
+sudo dnf install git -y  
+git clone https://github.com/Echalaye/WebApiInfra.git  
+cd WebApiInfra/
+```
+
+### B. Lancement du script de configuration de l'api Flask
+
+```
+bash scriptsApi.sh
+```
