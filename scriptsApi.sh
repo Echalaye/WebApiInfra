@@ -4,7 +4,7 @@ dnf install pip -y
 
 useradd -m -s /bin/bash apiuser
 
-su - apiuser 
+su - apiuser << EOF
 
 pip install virtualenv
 
