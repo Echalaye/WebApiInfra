@@ -18,7 +18,7 @@ Mariadb.VM | 10.110.1.12 | Rocky Linux 9
 
 RProxy.VM  | 10.110.1.13 | Rocky Linux 9
 
-Sur chaque vm il vous faut git:
+### Sur chaque vm il vous faut git:
 ```bash
 sudo dnf install git -y  
 git clone https://github.com/Echalaye/WebApiInfra.git  
