@@ -1,10 +1,10 @@
-Bonjour, voici notre solution de déploiement (et création d'API) avec Flask !  
-Vous avez une base de données sql et vous voulez en faire une API ?  
-Vous êtes au bon endroit !  
-
 # WEB API
 
 ## Fonctionnement :
+
+Bonjour, voici notre solution de déploiement (et création d'API) avec Flask !  
+Vous avez une base de données sql et vous voulez en faire une API ?  
+Vous êtes au bon endroit !  
 
 ## Prérequis:
 
