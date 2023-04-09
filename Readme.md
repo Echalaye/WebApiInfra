@@ -81,15 +81,12 @@ exit;
 
 **Vous avez fini la mise en place de votre serveur Mariadb**
 
-## Configuration Api.VM
+## Configuration Proxy.VM
 
-### A. Installation des packages de base 
+## Configuration Api.VM
 
 ```bash
 sudo dnf install git -y  
 git clone https://github.com/Echalaye/WebApiInfra.git 
 sudo bash WebApiInfra/flask_install.sh ; bash WebApiInfra/api_setup.sh
 ```
-
-
-## 
