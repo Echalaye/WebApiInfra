@@ -30,6 +30,9 @@ sudo dnf update -y
 sudo dnf install git -y
 
 git clone https://github.com/Echalaye/WebApiInfra.git
+
+sudo firewall-cmd --add-port=3306/tcp --permanent
+sudo firewall-cmd --reload
 ```
 
 ### B. Mise en place mariadb-server
