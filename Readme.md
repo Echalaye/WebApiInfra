@@ -107,5 +107,4 @@ source ./env/bin/activate ; python WebApiInfra/app.py
 Pour accéder à votre api il faut:
 Aller sur le lien suivant 10.110.1.13 dans votre navigateur ou avec un curl
 
-Exemple d'utilisation de l'api:  
 
