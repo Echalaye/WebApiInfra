@@ -1,5 +1,7 @@
-sudo dnf update -y  
-sudo dnf install mysql -y  
-sudo dnf install pip -y  
-sudo dnf install git -y  
+dnf update -y  
+dnf install mysql -y  
+dnf install pip -y  
+dnf install git -y  
 git clone https://github.com/Echalaye/WebApiInfra.git  
+firewall-cmd --add-port=5000/tcp --permanent
+firewall-cmd --reload
