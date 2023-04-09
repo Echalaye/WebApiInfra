@@ -1,5 +1,11 @@
-dnf install mysql -y
+pip install virtualenv
 
-dnf install pip -y
+virtualenv ./env
 
-bash apiscript2.sh
+source ./env/bin/activate
+
+pip install flask
+
+pip install mysql-connector
+
+flask --app app.py run --debug
