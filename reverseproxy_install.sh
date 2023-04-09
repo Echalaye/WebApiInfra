@@ -1,5 +1,3 @@
-#!/bin/bash
-
 dnf update -y
 dnf install nginx -y
 firewall-cmd --add-port=80/tcp --permanent
